@@ -9,6 +9,9 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+  background-image: url(./image/bg-illustration.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,11 +21,13 @@
 }
 
 body {
-  margin: 0px auto;
+  margin: 0 auto;
   display: flex;
   place-items: center;
+  max-width: 500px;
   min-width: 320px;
   min-height: 100vh;
+  
 }
 
 button {
