@@ -23,21 +23,26 @@ function App() {
   return (
 <>
 
-{!text  ? <div id='root'>
-
-<img src={viteLogo} alt="" />
+{!text  ? <div className='' id='root'>
+<div className=''>
+<img className='' src={viteLogo} alt="" />
+</div>
 <form className='mb-8'onSubmit={handleSubmit}>   
     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">qr</label>
-    <div className="relative w-96 border-8 border-[#3662E3]">
-        <input  type="text" onChange={(e) => setFormData({...formData, text: e.target.value})}  value={formData.text} id="input" className=" border-3 border-[#3662E3] w-full p-4 ps-3 text-sm text-gray-900  rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter an Url" />
-        <button type='submit' className='relative bottom-[49px] left-[165px] bg-[#3662E3] '>QR Code</button>
+    <div className="relative w-96 border-8 border-[#3662E3] flex flex-col">
+        <input  type="text" 
+        onChange={(e) => setFormData({...formData, text: e.target.value})}  
+        value={formData.text} id="input" 
+        className="text-[16px] font-semibold text-[#364153] placeholder-[#364153] bg-black border-3 border-[#3662E3] w-[500px] h-8 p-4 ps-3 text-sm  rounded-2xl focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter an Url" 
+        />
+        <button type='submit' className='w-32 h-14 relative bottom-[62px] left-[400px] bg-[#3662E3] text-white font-bold'>QR code</button>
     </div>
 </form>
 </div> :
 
-<div className='grid'>
+<div className='rounded-xl grid bg-white w-80 h-[21rem] items-center content-center justify-center'>
 <QRCode value={formData.text}/>
-    <div className='flex justify-around'>
+    <div className='flex justify-around mt-8'>
     <button className='bg-[#3662E3]' >Share</button>
     <button className='bg-[#3662E3]'>Copy</button>
     </div>
