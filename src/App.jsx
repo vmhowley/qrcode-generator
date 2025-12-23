@@ -2,7 +2,7 @@ import React from 'react';
 import QRCode from 'react-qr-code';
 import './App.css';
 import ShareIcon from './assets/link_alt.svg';
-import DownloadIcon from './assets/load_circle_duotone.svg';
+import DownloadIcon from './assets/Load_circle_duotone.svg';
 import viteLogo from '/logo-qr-generator.svg';
 
 
