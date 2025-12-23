@@ -27,7 +27,11 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  
+  background-image: url("./assets/qa-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 
 button {
@@ -36,15 +40,4 @@ button {
   padding: 0.6em 1.2em;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  
 }
